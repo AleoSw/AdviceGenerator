@@ -15,7 +15,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://aleosw.github.io/AdviceGenerator/)
+- Live Site URL: [AdviceGenerator](https://aleosw.github.io/AdviceGenerator/)
 
 ## My process
 
