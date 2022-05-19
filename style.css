@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+  --font-size: 24px;
+  --Weights: 800;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: hsl(193, 38%, 86%);
+        --NeonGreen: hsl(150, 100%, 66%);
+        --text-gloom: hsl(217, 19%, 38%);
+        --bg-card: hsl(217, 19%, 24%);
+        --bg: hsl(218, 23%, 16%);
+    }
+
+    .card {
+        border: 2px transparent solid;
+    }
+  }
+  
+  @media (prefers-color-scheme: light) {
+        :root {
+            --text-color: hsl(217, 19%, 38%);
+            --NeonGreen: hsl(150, 100%, 66%);
+            --bg-card: hsl(0, 0%, 100%);
+            --bg: hsl(0, 0%, 100%);
+        }
+
+        .card {
+            border: 2px var(--NeonGreen) solid;
+        }
+  }
+
+html {
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg);
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    padding: 0 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    width: 100%;
+    max-width: 570px;
+    min-height: 250px;
+    text-align: center;
+    padding: 2.5rem 1.5rem 4rem 1.5rem;
+    background-color: var(--bg-card);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 10%);
+    animation-name: cardAnimation;
+    animation-duration: 2s;
+    transition: .4s;
+}
+
+@keyframes cardAnimation {
+    0% {
+        top: -200px;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+
+.adviceNumber {
+    font-size: 13px;
+    color: var(--NeonGreen);
+    letter-spacing: 0.3rem;
+}
+
+.adviceText {
+    font-size: var(--font-size);
+    font-weight: var(--Weights);
+    color: var(--text-color);
+    letter-spacing: 2px;
+}
+
+.pattern {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.svg-desktop {
+    display: none;
+}
+
+@media screen and (min-width: 576px) {
+    .svg-desktop {
+        display: block;
+    }
+
+    .svg-mobile {
+        display: none;
+    }
+}
+
+.icon {
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 70px;
+    height: 70px;
+    background-color: var(--NeonGreen);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.icon:hover {
+    box-shadow: 0 0 30px var(--NeonGreen);
+}
